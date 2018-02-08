@@ -87,13 +87,15 @@ using namespace seeta;
 #define EXPECT_EQ(a, b) if ((a) != (b)) std::cout << "ERROR: "
 
 #ifdef _WIN32
-std::string DATA_DIR = "../../data/";
-std::string MODEL_DIR = "../../model/";
+std::string DATA_DIR = "E:/WorkSpace_home/partTime_projects/SeetaFaceEngine/FaceIdentification/data/";
+std::string MODEL_DIR = "E:/WorkSpace_home/partTime_projects/SeetaFaceEngine/FaceIdentification/model/";
 #else
-std::string DATA_DIR = "./data/";
-std::string MODEL_DIR = "./model/";
+std::string DATA_DIR = "E:/WorkSpace_home/partTime_projects/SeetaFaceEngine/FaceIdentification/data/";
+std::string MODEL_DIR = "E:/WorkSpace_home/partTime_projects/SeetaFaceEngine/FaceIdentification/model/";
 #endif
-void TEST(FaceRecognizerTest, CropFace) {
+
+void TEST(FaceRecognizerTest, CropFace) 
+{
   FaceIdentification face_recognizer((MODEL_DIR + "seeta_fr_v1.0.bin").c_str());
   std::string test_dir = DATA_DIR + "test_face_recognizer/";
   /* data initialize */
